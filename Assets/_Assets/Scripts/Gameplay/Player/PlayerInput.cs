@@ -11,7 +11,8 @@ namespace _Assets.Scripts.Gameplay.Player
             _inputCommand.Horizontal = Input.GetAxis("Horizontal");
             _inputCommand.Vertical = Input.GetAxis("Vertical");
             _inputCommand.Shoot = Input.GetMouseButtonDown(0);
-            Debug.Log(_inputCommand.Shoot);
+            _inputCommand.MouseX = Input.mousePosition.x;
+            _inputCommand.MouseY = Input.mousePosition.y;
         }
         
         public PlayerInputCommand GetInput() => _inputCommand;

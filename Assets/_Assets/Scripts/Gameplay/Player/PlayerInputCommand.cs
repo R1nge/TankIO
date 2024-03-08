@@ -8,5 +8,6 @@ namespace _Assets.Scripts.Gameplay.Player
         public float Horizontal;
         public float Vertical;
         public bool Shoot;
+        public float MouseX, MouseY;
     }
 }

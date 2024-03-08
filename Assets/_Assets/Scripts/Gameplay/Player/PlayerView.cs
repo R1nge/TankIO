@@ -11,6 +11,7 @@ namespace _Assets.Scripts.Gameplay.Player
         private PlayerInput _playerInput;
         private PlayerMovement _playerMovement;
         private PlayerAttack _playerAttack;
+        private PlayerRotation _playerRotation;
         private readonly Queue<PlayerInputCommand> _playerInputCommands = new();
 
         private void Awake()
@@ -18,6 +19,7 @@ namespace _Assets.Scripts.Gameplay.Player
             _playerInput = new PlayerInput();
             _playerMovement = new PlayerMovement(transform);
             _playerAttack = new PlayerAttack();
+            _playerRotation = new PlayerRotation();
         }
 
         private void Update()
@@ -41,6 +43,8 @@ namespace _Assets.Scripts.Gameplay.Player
                 {
                     _playerAttack.Shoot(shootPoint, bulletPrefab, shootForce);
                 }
+                
+                _playerRotation.Tick(input.MouseX, input.MouseY, transform);
             }
         }
     }

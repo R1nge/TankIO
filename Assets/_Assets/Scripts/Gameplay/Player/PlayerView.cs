@@ -44,7 +44,7 @@ namespace _Assets.Scripts.Gameplay.Player
                     _playerAttack.Shoot(shootPoint, bulletPrefab, shootForce);
                 }
                 
-                _playerRotation.Tick(input.MouseX, input.MouseY, transform);
+                _playerRotation.Tick(input.MouseX, input.MouseY, shootPoint);
             }
         }
     }

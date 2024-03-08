@@ -38,13 +38,12 @@ namespace _Assets.Scripts.Gameplay.Player
                 var input = _playerInputCommands.Dequeue();
 
                 _playerMovement.Tick(input.Horizontal, input.Vertical);
+                _playerRotation.Tick(input.MouseX, input.MouseY, shootPoint);
 
                 if (input.Shoot)
                 {
                     _playerAttack.Shoot(shootPoint, bulletPrefab, shootForce);
                 }
-                
-                _playerRotation.Tick(input.MouseX, input.MouseY, shootPoint);
             }
         }
     }

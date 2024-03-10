@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using _Assets.Scripts.Gameplay.Bounce;
 using UnityEngine;
 
 namespace _Assets.Scripts.Gameplay.Player
@@ -7,19 +8,19 @@ namespace _Assets.Scripts.Gameplay.Player
     {
         [SerializeField] private Transform shootPoint;
         [SerializeField] private BulletView bulletPrefab;
-        [SerializeField] private float shootForce;
+        [SerializeField] private float shootForce = 50f;
         private PlayerInput _playerInput;
         private PlayerMovement _playerMovement;
-        private PlayerAttack _playerAttack;
         private PlayerRotation _playerRotation;
+        private PlayerAttack _playerAttack;
         private readonly Queue<PlayerInputCommand> _playerInputCommands = new();
 
         private void Awake()
         {
             _playerInput = new PlayerInput();
             _playerMovement = new PlayerMovement(transform);
-            _playerAttack = new PlayerAttack();
             _playerRotation = new PlayerRotation();
+            _playerAttack = new PlayerAttack();
         }
 
         private void Update()

@@ -4,11 +4,15 @@ namespace _Assets.Scripts.Gameplay.Player
 {
     public class PlayerRotation
     {
+        private readonly Camera _camera;
+
+        public PlayerRotation(Camera camera) => _camera = camera;
+
         public void Tick(float mouseX, float mouseY, Transform transform)
         {
-            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 10f));
+            var mousePosition = _camera.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 10f));
             Vector2 direction = mousePosition - transform.position;
-            float angle = Vector2.SignedAngle(Vector2.right, direction);
+            var angle = Vector2.SignedAngle(Vector2.right, direction);
             transform.eulerAngles = new Vector3 (0, 0, angle);
         }
     }

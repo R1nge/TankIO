@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using _Assets.Scripts.Gameplay.Bounce;
 using UnityEngine;
 
 namespace _Assets.Scripts.Gameplay.Player
@@ -19,7 +18,7 @@ namespace _Assets.Scripts.Gameplay.Player
         {
             _playerInput = new PlayerInput();
             _playerMovement = new PlayerMovement(transform);
-            _playerRotation = new PlayerRotation();
+            _playerRotation = new PlayerRotation(Camera.main);
             _playerAttack = new PlayerAttack();
         }
 

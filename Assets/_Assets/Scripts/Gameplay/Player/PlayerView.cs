@@ -25,10 +25,7 @@ namespace _Assets.Scripts.Gameplay.Player
 
         private void Update()
         {
-            _playerInput.Tick();
-            var input = _playerInput.GetInput();
-            _playerInputCommands.Enqueue(input);
-
+            GetInput();
             ExecuteInput();
         }
 
@@ -47,5 +44,7 @@ namespace _Assets.Scripts.Gameplay.Player
                 }
             }
         }
+
+        private void GetInput() => _playerInputCommands.Enqueue(_playerInput.GetInput());
     }
 }

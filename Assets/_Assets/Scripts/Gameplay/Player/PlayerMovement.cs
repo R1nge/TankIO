@@ -7,11 +7,8 @@ namespace _Assets.Scripts.Gameplay.Player
         private float _speed = 5f;
         private readonly Transform _transform;
 
-        public PlayerMovement(Transform transform)
-        {
-            _transform = transform;
-        }
-        
+        public PlayerMovement(Transform transform) => _transform = transform;
+
         public void SetSpeed(float speed) => _speed = speed;
 
         public void Tick(float horizontal, float vertical)

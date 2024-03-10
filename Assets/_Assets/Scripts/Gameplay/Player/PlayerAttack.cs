@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using _Assets.Scripts.Gameplay.Bullets;
+using UnityEngine;
 
 namespace _Assets.Scripts.Gameplay.Player
 {

@@ -558,6 +558,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerView
       objectReference: {fileID: 0}
+    - target: {fileID: 2285915026452474660, guid: 68e3960b66843ce4b8a336dfb3c3dc5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3092352350226825185, guid: 68e3960b66843ce4b8a336dfb3c3dc5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5474367694311849170, guid: 68e3960b66843ce4b8a336dfb3c3dc5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8202205137935096146, guid: 68e3960b66843ce4b8a336dfb3c3dc5f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
